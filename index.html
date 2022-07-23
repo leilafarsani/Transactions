@@ -62,14 +62,15 @@ document.getElementById('button2').addEventListener('click', (event) => {
 });
 
 document.getElementById('button3').addEventListener('click', (event) => {
-  event.target.innerText = balance.reduce((a,b) => a+b, 0);
   if (balance > 0) {
     let new_span = document.createElement('span');
+    new_span.innerText = balance.reduce((a,b) => a+b, 0);
     new_span.innerText = 'You are in the safe side';
 
     event.target.appendChild(new_span);
   } else {
     let new_span2 = document.createElement('span');
+    new_span2.innerText = balance.reduce((a,b) => a+b, 0);
     new_span2.innerText = 'You need to manage your expenses!';
 
     event.target.appendChild(new_span2);
